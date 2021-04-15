@@ -2,9 +2,9 @@ public class Circle {
   int radius;
   final double PI = 3.14;
 
-  double circleSquare (int rad) {
+  double circleSquare(int rad) {
     radius = rad;
-    return PI*radius*radius;
+    return PI * radius * radius;
   }
 
   public static void main(String[] args) {
