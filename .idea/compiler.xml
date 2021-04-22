@@ -9,5 +9,8 @@
         <module name="aF0" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aF0" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
