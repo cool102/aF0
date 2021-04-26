@@ -1,5 +1,15 @@
 public class Zadacha3<label149> {
 
+  static void isPhoneLengthIsOk1(String phoneNumber){
+    boolean matches = phoneNumber.matches("^[+][7][(]\\d{3}[)]\\d{3}[-]\\d{2}[-]\\d{2}$");
+    if(matches){
+      System.out.println("true1");
+    }
+    else {
+      System.out.println("false1");
+    }
+  }
+
   static void isPhoneLengthIsOk(String phoneNumber)
     {
     if (phoneNumber.length() == 16 && phoneNumber != null)
@@ -54,6 +64,13 @@ public class Zadacha3<label149> {
     isPhoneLengthIsOk("+5(911)310-12-74");
     isPhoneLengthIsOk("+7(9fg)125-42-99");
     isPhoneLengthIsOk("+7(122)2342343");
+    System.out.println("__________________________");
+    isPhoneLengthIsOk1("+7(912)632-10-64");
+    isPhoneLengthIsOk1("7(910)423-73-12");
+    isPhoneLengthIsOk1("89215310934");
+    isPhoneLengthIsOk1("+5(911)310-12-74");
+    isPhoneLengthIsOk1("+7(9fg)125-42-99");
+    isPhoneLengthIsOk1("+7(122)2342343");
 
 
 
