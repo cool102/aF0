@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Zadacha4 {
 
   static void resultString(String s1, String s2) {
@@ -20,8 +22,10 @@ public class Zadacha4 {
       }
       else str3=str3+str12.charAt(i);
     }
-    System.out.println(str3);
-
+    //System.out.println(str3);
+    char[] str3alphabet = str3.toCharArray();
+    Arrays.sort (str3alphabet);
+    System.out.println(str3alphabet);
   }
 
   public static void main(String[] args) {
