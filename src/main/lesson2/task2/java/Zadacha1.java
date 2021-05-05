@@ -2,9 +2,9 @@ package lesson2.task2;
 
 public class Zadacha1 {
 
-  static String[] array = {"Пятница", "это", "лучший", "день", "недели"};
 
-  static void outputArrayWithFor(String[] args) {
+
+  static void outputArrayWithFor(String[] array) {
     for (int i = 0; i < array.length - 1; i++) {
       System.out.print(array[i] + " ");
     }
@@ -12,7 +12,7 @@ public class Zadacha1 {
     System.out.println(".");
   }
 
-  static void outputArrayWithForEach(String[] args) {
+  static void outputArrayWithForEach(String[] array) {
     int indexOfArray = 0;
     for (String current :
             array) {
@@ -27,7 +27,7 @@ public class Zadacha1 {
     System.out.println(".");
   }
 
-  static void outputArrayWithWhile(String[] args) {
+  static void outputArrayWithWhile(String[] array) {
     int index = 0;
     while (index < array.length - 1) {
 
@@ -40,6 +40,8 @@ public class Zadacha1 {
   }
 
   public static void main(String[] args) {
+   String[] array = {"Пятница", "это", "лучший", "день", "недели"};
+
     outputArrayWithFor(array);
     System.out.println("----------");
     outputArrayWithForEach(array);
