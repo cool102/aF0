@@ -1,4 +1,4 @@
-//вывод на печать буквы А N раз -1
+//вывод на печать буквы А N раз -2
 public class Zadacha8 {
   static void printLetterANTimesWithBreak(int integer) {
     switch (integer) {
