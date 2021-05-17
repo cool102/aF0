@@ -41,12 +41,13 @@ public class Calculator {
 
   /**
    * метод делит число а на число б, остаток отбрасывает
+   *
    * @param a
    * @param b
    * @return
    */
   int devide(int a, int b) {
-    int s = a/b;
+    int s = a / b;
     return s;
 
   }
