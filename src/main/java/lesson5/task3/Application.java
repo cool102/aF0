@@ -15,12 +15,13 @@ public class Application {
     System.out.println("Число total равно=" + total);
     int countNumberOfOpertaions = 0;
     int countOfArithmeticExceptions = 0;
+    int countOfZero =0;
 
     for (int i = 1; i <= total; i++) {
       try {
         int m = new Random().nextInt(5);
         int n = new Random().nextInt(5);
-
+        if (n==0) countOfZero++;
         int resultOfDeviding = m / n;
 
       } catch (ArithmeticException ae) {
@@ -28,6 +29,6 @@ public class Application {
       }
       countNumberOfOpertaions++;
     }
-    System.out.printf("Из %d операций деления %d было выполнено с ошибкой", countNumberOfOpertaions, countOfArithmeticExceptions);
+    System.out.printf("Из %d операций деления %d было выполнено с ошибкой, а нулей в знаменателей было %d", countNumberOfOpertaions, countOfArithmeticExceptions,countOfZero);
   }
 }
