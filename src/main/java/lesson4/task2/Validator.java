@@ -59,38 +59,17 @@ public class Validator {
         break;
       }
     }
-      String output = isArrayOfHumanFull ?
-              "массив полон" :
-              "массив доступен для заполнения";
-      System.out.println(output);
-      return isArrayOfHumanFull;
+    String output = isArrayOfHumanFull ?
+            "массив полон" :
+            "массив доступен для заполнения";
+    System.out.println(output);
+    return isArrayOfHumanFull;
 
-    }
   }
+}
 
 
-  /**
-   * метод печатающий положительный результат операции
-   *
-   * @param type
-   * @param string
-   */
-  /*void goodResultOfOperation(String type) {
-    System.out.printf("Валидация  %s успешна", type);
-    System.out.println();
-  }*/
 
-  /**
-   * метод печатающий негативный результат операции
-   *
-   * @param type
-   * @param string
-   */
-
-  /*void badResultOfOperation(String type) {
-    System.out.printf("Валидация %s неуспешна", type);
-    System.out.println();
-  }*/
 
 
 

@@ -24,9 +24,9 @@ public class Human {
     boolean matches = lastName.matches("\\b[А-Я]{1,1}\\B[а-я]+");
     if (lastName.length() >= 3 && matches) {
       this.lastName = lastName;
-      setCorrectPrint(LASTNAME,lastName);
+      setCorrectPrint(LASTNAME, lastName);
     } else {
-      setInCorrectPrint(LASTNAME,lastName);
+      setInCorrectPrint(LASTNAME, lastName);
     }
 
   }
@@ -36,9 +36,9 @@ public class Human {
     boolean matches = firstName.matches("\\b[А-Я]{1,1}\\B[а-я]+");
     if (firstName.length() >= 3 && matches) {
       this.firstName = firstName;
-      setCorrectPrint(FIRSTNAME,firstName);
+      setCorrectPrint(FIRSTNAME, firstName);
     } else {
-      setInCorrectPrint(FIRSTNAME,firstName);
+      setInCorrectPrint(FIRSTNAME, firstName);
     }
 
   }
@@ -53,36 +53,42 @@ public class Human {
 
       this.birthDate = birthDate;
       String formatedDate = sdf.format(birthDate); //парсинг строки в дату по шаблону выши);
-      setCorrectPrint(DATEBIRTH,formatedDate);
+      setCorrectPrint(DATEBIRTH, formatedDate);
     }
   }
+
   //получаем фамилию
   String getLastName() {
 
     //getPrint(LASTNAME, lastName);
     return lastName;
   }
+
   //получаем имя
   String getFirstName() {
     //getPrint(FIRSTNAME, firstName);
     return firstName;
   }
+
   //получаем дату рождения
   String getBirthDate() {
     String formatedDate = sdf.format(this.birthDate); //парсинг строки в дату по шаблону выши
     //getPrint(DATEBIRTH,formatedDate);
     return formatedDate;
   }
+
   //печатаем сообщение о том что Геттер отработал
   void getPrint(String type, String string) {
-    System.out.printf("Получено значение %s: %s\n",type, string);
+    System.out.printf("Получено значение %s: %s\n", type, string);
   }
+
   //печатаем сообщение что сеттер принял значение
   void setCorrectPrint(String type, String string) {
-    System.out.printf("Установлено корректное значение %s : %s\n", type,string);
+    System.out.printf("Установлено корректное значение %s : %s\n", type, string);
   }
+
   //печатаем сообщение что сеттер вернул ошибку и не принял значение
-  void setInCorrectPrint(String type , String string) {
+  void setInCorrectPrint(String type, String string) {
     System.out.printf("Введенное значение %s некорректно: %s\n", type, string);
   }
 }

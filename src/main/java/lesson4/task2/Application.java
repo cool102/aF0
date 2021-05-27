@@ -17,7 +17,7 @@ public class Application {
       Scanner scan = new Scanner(System.in);
       System.out.println("Введите строку в  формате %s %s %s");
       String string = scan.nextLine();
-      System.out.println("Вот считанная строка"+string);
+      System.out.println("Вот считанная строка" + string);
 
       System.out.println("создаю объект класса валидатор");
       Validator valid = new Validator();
@@ -30,8 +30,8 @@ public class Application {
       System.out.println(output);
 
 
-      if(!goodString) continue;
-      System.out.println("эта строка напечаталась, значит программа пошла дальще");
+      if (!goodString) continue;
+      System.out.println("эта строка напечаталась, значит программа пошла дальше");
 
       //строку записываю в массив, теперь в массиве есть строки которые можно использовать для создания объекта Human
       String[] humanFields = valid.returnStringSpacedArray(string);
@@ -50,18 +50,16 @@ public class Application {
       System.out.println("првоеряю валиден ли объект");
       boolean objectValid = valid.isHumanValid(human);
       System.out.println(objectValid);
-      if(!objectValid) continue;
+      if (!objectValid) continue;
 
       arrayOfHuman[index++] = human;
-      System.out.println("печатаю индекс"+index);
+      System.out.println("печатаю индекс" + index);
 
 
       boolean isArrayFull = valid.isArrayOfHumanFull(arrayOfHuman);
       if (isArrayFull) break;
     }
 
-
-    //цикл считывающий строки до тех пор пока массив Human не будет полностью заполнен валидными значениями
 
   }
 }
