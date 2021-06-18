@@ -8,13 +8,13 @@ public enum DayOfWeek {
     FRIDAY("пятница"),
     SATURDAY("суббота");
 
-    private String description;
+    private final String description;
 
     DayOfWeek(String description) {
         this.description = description;
     }
 
-    public String getDay(){
-        return  description;
+    public String getDay() {
+        return description;
     }
 }

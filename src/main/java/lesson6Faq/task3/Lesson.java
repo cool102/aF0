@@ -13,16 +13,11 @@ public enum Lesson {
     BIOLOGY("Биология"),
     GEOGRAPHY("география");
 
-    private String descriptionOfLesson;
+    private final String descriptionOfLesson;
 
-    Lesson(String descrip){
+    Lesson(String descrip) {
         this.descriptionOfLesson = descrip;
     }
-
-    public String getDescriptionOfLesson() {
-        return descriptionOfLesson;
-    }
-
 
     public static List<Lesson> generateListOfLessons() {
         List<Lesson> lessons = new ArrayList<>();
@@ -32,5 +27,9 @@ public enum Lesson {
             lessons.add(i, lessonsAsArray.get(new Random().nextInt(6)));
         }
         return lessons;
+    }
+
+    public String getDescriptionOfLesson() {
+        return descriptionOfLesson;
     }
 }
