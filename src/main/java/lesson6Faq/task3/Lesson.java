@@ -29,7 +29,7 @@ public enum Lesson {
         List<Lesson> lessonsAsArray = Arrays.asList(Lesson.values());
         int numberOfLesson = 4 + new Random().nextInt(2);
         for (int i = 0; i < numberOfLesson; i++) {
-            lessons.add(i, lessonsAsArray.get(new Random().nextInt(5)));
+            lessons.add(i, lessonsAsArray.get(new Random().nextInt(6)));
         }
         return lessons;
     }

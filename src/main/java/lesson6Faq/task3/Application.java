@@ -1,11 +1,14 @@
 package lesson6Faq.task3;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Application {
     public static void main(String[] args) {
+        Scholar scholar = new Scholar();
+
         Map<DayOfWeek, List<Lesson>> diary = new HashMap<>();
         diary.put(DayOfWeek.MONDAY, Lesson.generateListOfLessons());
         diary.put(DayOfWeek.TUESDAY, Lesson.generateListOfLessons());
@@ -13,91 +16,33 @@ public class Application {
         diary.put(DayOfWeek.THURSDAY, Lesson.generateListOfLessons());
         diary.put(DayOfWeek.FRIDAY, Lesson.generateListOfLessons());
         diary.put(DayOfWeek.SATURDAY, Lesson.generateListOfLessons());
-
-
-        Scholar scholar = new Scholar();
-
+        System.out.println("Расписание уроков на неделю");
+        System.out.println();
         for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
         ) {
-            System.out.printf(entry.getKey().getDay() + ":" + entry.getValue() + " \n");
+            System.out.println(entry.getKey().getDay() + ":" + entry.getValue());
 
         }
+        System.out.println("-------------------------------------------");
+        Map<String, Integer> resultInCycle = new HashMap<>();
 
-
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
-
-        Map<String, Integer> result = new HashMap<>();
-        int mathCounter = 0;
-        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
+        List<Lesson> AllLessons = Arrays.asList(Lesson.MATH, Lesson.CODING, Lesson.BIOLOGY, Lesson.HISTORY, Lesson.GEOGRAPHY, Lesson.PHYSIC);
+        for (Lesson curLesson : AllLessons
         ) {
-            List<Lesson> dayLessons = entry.getValue();
-            for (Lesson currentLesson : dayLessons
-            ) {
-                if (currentLesson == Lesson.MATH) {
-                    mathCounter++;
+            int currentLessonCounter = 0;
+            for (Map.Entry<DayOfWeek, List<Lesson>> currentEntry : diary.entrySet()) {
+                List<Lesson> currentEntryValues = currentEntry.getValue();
+                for (Lesson currenLesson : currentEntryValues
+                ) {
+                    if (currenLesson == curLesson) {
+                        currentLessonCounter++;
+                    }
+
                 }
-
             }
+            resultInCycle.put(curLesson.getDescriptionOfLesson(), currentLessonCounter);
         }
-        result.put("Количество уроков математики:", mathCounter);
+        System.out.println(resultInCycle);
 
-        int histCounter = 0;
-        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
-        ) {
-            List<Lesson> dayLessons = entry.getValue();
-            for (Lesson currentLesson : dayLessons
-            ) {
-                if (currentLesson == Lesson.HISTORY) {
-                    histCounter++;
-                }
-
-            }
-        }
-        result.put("Количество уроков истории:", histCounter);
-
-        int phusCounter = 0;
-        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
-        ) {
-            List<Lesson> dayLessons = entry.getValue();
-            for (Lesson currentLesson : dayLessons
-            ) {
-                if (currentLesson == Lesson.PHYSIC) {
-                    phusCounter++;
-                }
-
-            }
-        }
-        result.put("Количество уроков физики:", phusCounter);
-
-        int codCounter = 0;
-        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
-        ) {
-            List<Lesson> dayLessons = entry.getValue();
-            for (Lesson currentLesson : dayLessons
-            ) {
-                if (currentLesson == Lesson.CODING) {
-                    codCounter++;
-                }
-
-            }
-        }
-        result.put("Количество уроков программирования:", codCounter);
-
-
-        int bioCounter = 0;
-        for (Map.Entry<DayOfWeek, List<Lesson>> entry : diary.entrySet()
-        ) {
-            List<Lesson> dayLessons = entry.getValue();
-            for (Lesson currentLesson : dayLessons
-            ) {
-                if (currentLesson == Lesson.BIOLOGY) {
-                    bioCounter++;
-                }
-
-            }
-        }
-        result.put("Количество уроков биологии:", bioCounter);
-
-        System.out.println(result);
     }
 }
