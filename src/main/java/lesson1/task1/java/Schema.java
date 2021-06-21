@@ -1,3 +1,5 @@
+
+
 public class Schema {
     static boolean doAndThenDoNotOrThenDoAnd(boolean a, boolean b, boolean c, boolean d) {
         return (a && b) && !(c || d);
@@ -9,5 +11,7 @@ public class Schema {
         System.out.println(doAndThenDoNotOrThenDoAnd(false, true, false, true));
         System.out.println(doAndThenDoNotOrThenDoAnd(true, false, true, false));
         System.out.println(doAndThenDoNotOrThenDoAnd(true, true, false, false));
+
+
     }
 }
