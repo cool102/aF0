@@ -4,7 +4,7 @@ public class Cat {
     String name;
     int age;
 
-    Cat(String nameOfCat, int ageOfCat) {
+   public Cat(String nameOfCat, int ageOfCat) {
         this.name = nameOfCat;
         this.age = ageOfCat;
     }
@@ -33,5 +33,11 @@ public class Cat {
 
         }
 
+    }
+
+
+    @Override
+    public String toString() {
+        return "name=" + name + ", age=" + age;
     }
 }
