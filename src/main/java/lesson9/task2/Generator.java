@@ -2,7 +2,7 @@ package lesson9.task2;
 
 public class Generator {
     private static int roundRobin = 0;
-
+    //комментарий
     public static Object generate() {
         roundRobin %= 4;
         switch (roundRobin++) {

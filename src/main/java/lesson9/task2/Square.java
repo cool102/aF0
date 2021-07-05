@@ -1,5 +1,5 @@
 package lesson9.task2;
-
+//комментарий
 public class Square implements Drawable {
     @Override
     public void draw() {
