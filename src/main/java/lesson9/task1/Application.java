@@ -14,7 +14,6 @@ public class Application {
             cars.add(Factory.make());
         }
 
-        //Количество машин каждой марки, количество машин в каждом сегменте (Regular / Premium).
         int renaultCount = 0;
         int nissanCount = 0;
         int mitsubishiCount = 0;

@@ -1,5 +1,5 @@
 package lesson9.task1;
-
+//комментарий
 import java.util.Random;
 
 public class Factory {
