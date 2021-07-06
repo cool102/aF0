@@ -27,11 +27,11 @@ public class Human {
 
     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 
-    //Устанавливаем ФАМИЛИЮ
+
     public void setLastName(String lastName) {
         //проверка длины  имени
         // проверка что первая буква Заглавная
-        boolean matches = lastName.matches("\\b[А-Я]{1,1}\\B[а-я]+");
+        boolean matches = lastName.matches("\\b[А-Я]\\B[а-я]{2,}+");
         if (lastName.length() >= 3 && matches) {
             this.lastName = lastName;
             setCorrectPrint(LASTNAME, lastName);
@@ -56,13 +56,13 @@ public class Human {
     //устанваливаем Дату рождения
     public void setBirthDate(Date birthDate) {
         if (birthDate.after(new Date())) {
-            String formatedDate = sdf.format(birthDate); //парсинг строки в дату по шаблону выши);
+            String formatedDate = sdf.format(birthDate); //парсинг строки в дату по шаблону выше);
             setInCorrectPrint(DATEBIRTH, formatedDate);
 
         } else {
 
             this.birthDate = birthDate;
-            String formatedDate = sdf.format(birthDate); //парсинг строки в дату по шаблону выши);
+            String formatedDate = sdf.format(birthDate); //парсинг строки в дату по шаблону выше);
             setCorrectPrint(DATEBIRTH, formatedDate);
         }
     }

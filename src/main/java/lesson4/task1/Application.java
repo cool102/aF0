@@ -9,13 +9,13 @@ public class Application {
     public static void main(String[] args) throws ParseException {
         Human almaz = new Human();
 
-        //установил фамилию
+
         almaz.setLastName("Саляхов");
 
-        //установил имя
+
         almaz.setFirstName("Алмаз");
 
-        //установил дату рождения
+
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         Date parsedDate = sdf.parse("07.05.1984"); //парсинг строки в дату по шаблону выши
 
@@ -24,14 +24,10 @@ public class Application {
 
         almaz.setBirthDate(parsedDate);
 
-        //получил фамилию
         almaz.getLastName();
-
-        //получил имя
         almaz.getFirstName();
-
-        //получил дату рождения
         almaz.getBirthDate();
+
         System.out.println("--------------------------");
         System.out.println("Проверочные кейсы на фамилию");
         almaz.setLastName("Са");
