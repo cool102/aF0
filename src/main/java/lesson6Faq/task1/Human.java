@@ -1,10 +1,10 @@
 package lesson6Faq.task1;
 
 public class Human {
-    String surname;
-    String name;
-    int age;
-    String phoneNumber;
+    private String surname;
+    private String name;
+    private int age;
+    private String phoneNumber;
 
     public Human(String surname, String name, int age, String phoneNumber) {
         this.surname = surname;
