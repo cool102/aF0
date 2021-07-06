@@ -8,18 +8,17 @@ public class Application {
     public static void main(String[] args) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 
-        //создал массив Human размером 3
-        Human[] arrayOfHuman = new Human[3];
+
+        Human[] humans = new Human[3];
         int index = 0;
 
         while (true) {
-            //создал переменную string в которую считываю строки из консоли
+
             Scanner scan = new Scanner(System.in);
             System.out.println("Введите строку в  формате %s %s %s");
             String string = scan.nextLine();
             System.out.println("Вот считанная строка" + string);
 
-            System.out.println("создаю объект класса валидатор");
             Validator valid = new Validator();
 
             System.out.println("валидирую строку");
@@ -31,7 +30,7 @@ public class Application {
 
 
             if (!goodString) continue;
-            System.out.println("эта строка напечаталась, значит программа пошла дальше");
+
 
             //строку записываю в массив, теперь в массиве есть строки которые можно использовать для создания объекта Human
             String[] humanFields = valid.returnStringSpacedArray(string);
@@ -52,11 +51,11 @@ public class Application {
             System.out.println(objectValid);
             if (!objectValid) continue;
 
-            arrayOfHuman[index++] = human;
+            humans[index++] = human;
             System.out.println("печатаю индекс" + index);
 
 
-            boolean isArrayFull = valid.isArrayOfHumanFull(arrayOfHuman);
+            boolean isArrayFull = valid.isArrayOfHumanFull(humans);
             if (isArrayFull) break;
         }
 

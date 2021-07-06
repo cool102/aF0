@@ -17,7 +17,7 @@ public class Human {
 
     SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 
-    //Устанавливаем ФАМИЛИЮ
+
     public void setLastName(String lastName) {
         //проверка длины  имени
         // проверка что первая буква Заглавная
@@ -57,37 +57,33 @@ public class Human {
         }
     }
 
-    //получаем фамилию
-    String getLastName() {
 
-        //getPrint(LASTNAME, lastName);
+    String getLastName() {
         return lastName;
     }
 
-    //получаем имя
+
     String getFirstName() {
-        //getPrint(FIRSTNAME, firstName);
         return firstName;
     }
 
-    //получаем дату рождения
+
     String getBirthDate() {
         String formatedDate = sdf.format(this.birthDate); //парсинг строки в дату по шаблону выши
-        //getPrint(DATEBIRTH,formatedDate);
         return formatedDate;
     }
 
-    //печатаем сообщение о том что Геттер отработал
+
     void getPrint(String type, String string) {
         System.out.printf("Получено значение %s: %s\n", type, string);
     }
 
-    //печатаем сообщение что сеттер принял значение
+
     void setCorrectPrint(String type, String string) {
         System.out.printf("Установлено корректное значение %s : %s\n", type, string);
     }
 
-    //печатаем сообщение что сеттер вернул ошибку и не принял значение
+
     void setInCorrectPrint(String type, String string) {
         System.out.printf("Введенное значение %s некорректно: %s\n", type, string);
     }

@@ -2,10 +2,7 @@ package lesson4.task2;
 
 public class Validator {
 
-    private final String regexString = "^[\\S]+\\s[\\S]+\\s[\\S]+$";
-    String inputString = "строки";
-    String createdObject = "объекта";
-    String array = "массива Human";
+    private final String REGEXSTRING = "^[\\S]+\\s[\\S]+\\s[\\S]+$";
 
     /**
      * метод валидирует строку на 2 пробела
@@ -13,12 +10,7 @@ public class Validator {
     public boolean StringFormatValidation(String stringFromInput) {
         //валидна, если в строке 2 пробела
         //невалидна -вывести сообщение
-        boolean matches = stringFromInput.matches(regexString);
-   /* if (matches) {
-      goodResultOfOperation(inputString);
-    } else {
-      badResultOfOperation(inputString);
-    }*/
+        boolean matches = stringFromInput.matches(REGEXSTRING);
         return matches;
     }
 
@@ -36,13 +28,6 @@ public class Validator {
     public boolean isHumanValid(Human object) {
 
         boolean isHumanValid = object.getLastName() != null && object.getFirstName() != null && object.getBirthDate() != null;
-   /* if (isHumanValid) {
-      goodResultOfOperation(createdObject);
-
-    } else {
-      badResultOfOperation(createdObject);
-
-    }*/
         return isHumanValid;
     }
 
