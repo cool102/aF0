@@ -13,23 +13,27 @@ public enum Lesson {
     BIOLOGY("Биология"),
     GEOGRAPHY("география");
 
-    private final String descriptionOfLesson;
+    private final String description;
 
-    Lesson(String descrip) {
-        this.descriptionOfLesson = descrip;
+    Lesson(String description) {
+        this.description = description;
     }
 
-    public static List<Lesson> generateListOfLessons() {
+    public static List<Lesson> generatefLessons() {
         List<Lesson> lessons = new ArrayList<>();
         List<Lesson> lessonsAsArray = Arrays.asList(Lesson.values());
-        int numberOfLesson = 4 + new Random().nextInt(2);
+        int numberOfLesson = getRandomLesson();
         for (int i = 0; i < numberOfLesson; i++) {
             lessons.add(i, lessonsAsArray.get(new Random().nextInt(6)));
         }
         return lessons;
     }
 
+    private static int getRandomLesson() {
+        return 4 + new Random().nextInt(2);
+    }
+
     public String getDescriptionOfLesson() {
-        return descriptionOfLesson;
+        return description;
     }
 }
