@@ -1,8 +1,8 @@
 package lesson5.task2;
 
 public class Cat {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public Cat(String nameOfCat, int ageOfCat) {
         this.name = nameOfCat;
