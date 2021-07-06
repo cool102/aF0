@@ -1,20 +1,20 @@
 package lesson5.task4;
 
 public class Cat {
-    String name;
-    int age;
+    String catName;
+    int catAge;
 
-    public Cat(String catName, int ageOfCat) {
+    public Cat(String catName, int catAge) {
 
-        this.name = catName;
+        this.catName = catName;
         try {
-            if (ageOfCat < 0) {
+            if (catAge < 0) {
                 throw new AgeUnderZeroException();
             }
-            if ((ageOfCat > 20)) {
+            if ((catAge > 20)) {
                 throw new AgeTooHighException();
             }
-            this.age = ageOfCat;
+            this.catAge = catAge;
         } catch (AgeTooHighException athe) {
 
         }
