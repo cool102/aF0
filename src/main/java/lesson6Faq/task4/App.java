@@ -15,7 +15,7 @@ public class App {
         }
 
         for (Person person : personsList) {
-            IdentityDocumentType docType = person.getidentityDocument().getIdentityDocumentType();
+            IdentityDocumentType docType = person.getIdentityDocument().getIdentityDocumentType();
             counters.put(docType, counters.get(docType) + 1);
         }
 
@@ -37,7 +37,7 @@ public class App {
         Iterator<Person> iterator = personsList.iterator();
         while (iterator.hasNext()) {
             Person person = iterator.next();
-            if (!person.getidentityDocument().getIdentityDocumentType().getCode().equals("21"))
+            if (!person.getIdentityDocument().getIdentityDocumentType().getCode().equals("21"))
                 iterator.remove();
         }
 

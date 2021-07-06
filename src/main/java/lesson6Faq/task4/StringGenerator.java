@@ -9,7 +9,7 @@ public class StringGenerator {
         switch (documentType) {
             case MILITARY_ID: //ББ 0999999
                 return String.format(String.format("%s %s", randomString(2),randomDigitString(7)));
-            case DIPLOMATIC_pASSPORT:
+            case DIPLOMATIC_PASSPORT:
             case INTERNATIONAL_PASSPORT:
 
                 return String.format(String.format("%s %s", randomDigitString(2),randomDigitString(7)));

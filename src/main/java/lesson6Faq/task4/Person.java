@@ -1,16 +1,16 @@
 package lesson6Faq.task4;
 
 public class Person {
-    String surname;
-    String name;
-    IdentityDocument identityDocument;
+    private String surname;
+    private String name;
+    private IdentityDocument identityDocument;
 
-   public static Person random(){
-    String surname = NameGenerator.generateName();
-    String name = NameGenerator.generateName();
-    IdentityDocument identityDocument = IdentityDocument.random();
-     return new Person(surname,name, identityDocument);
-   }
+    public static Person random() {
+        String surname = NameGenerator.generateName();
+        String name = NameGenerator.generateName();
+        IdentityDocument identityDocument = IdentityDocument.random();
+        return new Person(surname, name, identityDocument);
+    }
 
     public Person(String surname, String name, IdentityDocument identityDocument) {
         this.surname = surname;
@@ -26,7 +26,7 @@ public class Person {
         return name;
     }
 
-    public IdentityDocument getidentityDocument() {
+    public IdentityDocument getIdentityDocument() {
         return identityDocument;
     }
 }
