@@ -13,22 +13,22 @@ public class Application {
     public static void main(String[] args) {
         int total = new Random().nextInt(500) + 501;
         System.out.println("Число total равно=" + total);
-        int countNumberOfOpertaions = 0;
-        int countOfArithmeticExceptions = 0;
-        int countOfZero = 0;
+        int operationsCount = 0;
+        int arithmeticExceptionsCount = 0;
+        int zerosCount = 0;
 
         for (int i = 1; i <= total; i++) {
             try {
                 int m = new Random().nextInt(5);
                 int n = new Random().nextInt(5);
-                if (n == 0) countOfZero++;
-                int resultOfDeviding = m / n;
+                if (n == 0) zerosCount++;
+
 
             } catch (ArithmeticException ae) {
-                countOfArithmeticExceptions++;
+                arithmeticExceptionsCount++;
             }
-            countNumberOfOpertaions++;
+            operationsCount++;
         }
-        System.out.printf("Из %d операций деления %d было выполнено с ошибкой, а нулей в знаменателей было %d", countNumberOfOpertaions, countOfArithmeticExceptions, countOfZero);
+        System.out.printf("Из %d операций деления %d было выполнено с ошибкой, а нулей в знаменателей было %d", operationsCount, arithmeticExceptionsCount, zerosCount);
     }
 }
