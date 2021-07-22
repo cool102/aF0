@@ -8,7 +8,7 @@ public class Calculator {
      * @param b
      * @return
      */
-    int summ(int a, int b) {
+   public int summ(int a, int b) {
         int s = a + b;
         return s;
     }
@@ -20,7 +20,7 @@ public class Calculator {
      * @param b
      * @return
      */
-    int substract(int a, int b) {
+    public int substract(int a, int b) {
         int s = a - b;
         return s;
 
@@ -33,7 +33,7 @@ public class Calculator {
      * @param b
      * @return
      */
-    int multiply(int a, int b) {
+    public int multiply(int a, int b) {
         int s = a * b;
         return s;
 
@@ -46,7 +46,7 @@ public class Calculator {
      * @param b
      * @return
      */
-    int devide(int a, int b) {
+    public int devide(int a, int b) {
         int s = a / b;
         return s;
 
