@@ -8,11 +8,11 @@ public class Application {
 /**
  * создал массив из 5 котов
  */
-        arrayOfCats[0] = new Cat(2, 5, "Барсик");
-        arrayOfCats[1] = new Cat(3, 11, "Мурзик");
-        arrayOfCats[2] = new Cat(7, 2, "Матильда");
-        arrayOfCats[3] = new Cat(1, 3, "Леопольд");
-        arrayOfCats[4] = new Cat(11, 4, "Базилио");
+        arrayOfCats[0] = new Cat("Барсик", 2, 5);
+        arrayOfCats[1] = new Cat("Мурзик",3, 11 );
+        arrayOfCats[2] = new Cat("Матильда",7, 2);
+        arrayOfCats[3] = new Cat("Леопольд",1, 3);
+        arrayOfCats[4] = new Cat("Базилио",11, 4);
 
 
         /**

@@ -5,7 +5,7 @@ public class Cat {
     int weight;
     String name;
 
-    Cat(int age, int weight, String name) {
+    public Cat(String name, int age, int weight) {
         this.age = age;
         this.weight = weight;
         this.name = name;
