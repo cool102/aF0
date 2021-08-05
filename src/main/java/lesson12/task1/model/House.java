@@ -1,4 +1,4 @@
-package lesson12.model;
+package lesson12.task1.model;
 
 import java.util.Arrays;
 import java.util.List;

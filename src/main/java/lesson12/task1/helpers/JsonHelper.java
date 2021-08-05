@@ -1,7 +1,7 @@
-package lesson12.helpers;
+package lesson12.task1.helpers;
 
 import com.google.gson.Gson;
-import lesson12.model.Generatable;
+import lesson12.task1.model.Generatable;
 
 public class JsonHelper implements SerializeHelper{
     @Override

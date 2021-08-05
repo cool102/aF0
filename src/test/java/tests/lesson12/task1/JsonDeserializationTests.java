@@ -1,10 +1,10 @@
 package tests.lesson12.task1;
 
-import lesson12.helpers.FileHelper;
-import lesson12.helpers.JsonHelper;
-import lesson12.model.Flat;
-import lesson12.model.House;
-import lesson12.model.Room;
+import lesson12.task1.helpers.FileHelper;
+import lesson12.task1.helpers.JsonHelper;
+import lesson12.task1.model.Flat;
+import lesson12.task1.model.House;
+import lesson12.task1.model.Room;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

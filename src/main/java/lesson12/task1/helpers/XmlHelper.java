@@ -1,8 +1,8 @@
-package lesson12.helpers;
+package lesson12.task1.helpers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import lesson12.model.Generatable;
+import lesson12.task1.model.Generatable;
 
 public class XmlHelper implements SerializeHelper {
 

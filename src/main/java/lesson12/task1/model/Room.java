@@ -1,4 +1,4 @@
-package lesson12.model;
+package lesson12.task1.model;
 
 public class Room implements Generatable{
     private int width;

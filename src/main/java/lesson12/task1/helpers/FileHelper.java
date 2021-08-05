@@ -1,4 +1,4 @@
-package lesson12.helpers;
+package lesson12.task1.helpers;
 
 import java.io.IOException;
 import java.nio.file.Files;
