@@ -12,4 +12,12 @@ public class Cat {
 
     }
 
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "age=" + age +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
