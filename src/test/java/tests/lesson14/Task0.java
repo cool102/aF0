@@ -8,6 +8,6 @@ import java.util.List;
 
 public class Task0 {
     public static void main(String[] args) throws IOException {
-       List<Person> person = JsonHelper.getPersonsFromFile("src/main/java/lesson14/dataset.json");
+        List<Person> person = JsonHelper.getPersonsFromFile("src/main/java/lesson14/dataset.json");
     }
 }
