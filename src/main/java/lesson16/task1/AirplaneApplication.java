@@ -10,7 +10,7 @@ public class AirplaneApplication {
         Class<Airplane> clazz = Airplane.class;
         Field planeSpeedField = clazz.getDeclaredField("speed");
         planeSpeedField.setAccessible(true);
-        planeSpeedField.set(plane,230);
+        planeSpeedField.set(plane, 230);
 
         Method inspectMethod = clazz.getDeclaredMethod("inspect");
         inspectMethod.setAccessible(true);
